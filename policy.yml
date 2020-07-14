@@ -18,12 +18,12 @@
   - !layer
 
   # The host ID needs to match the AWS ARN of the role we wish to authenticate.
-  - !host 011915987442/MyApp
+  - !host $ARN/MyApp
 
   # Add our host into our layer
   - !grant
     role: !layer
-    member: 011915987442/MyApp
+    member: $ARN/MyApp
 
   # Give the host in our layer permission to retrieve variables
   - !grant
